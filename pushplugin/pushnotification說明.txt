@@ -1,0 +1,25 @@
+產生一個phonegap的專案
+
+cordova plugin add https://github.com/phonegap-build/PushPlugin
+cordova plugin add org.apache.cordova.device
+cordova plugin add org.apache.cordova.media
+cordova plugin add org.apache.cordova.viberation
+
+把PushNotification.js移到assets/www/下面
+
+加入jquery_1.5.2.min.js
+
+修改com.plugin.gcm裡面的GCMIntentService.java
+
+	NotificationCompat.Builder mBuilder =
+			new NotificationCompat.Builder(context)
+				.setDefaults(defaults)
+				.setSmallIcon(context.getApplicationInfo().icon)--->這是通知icon
+				.setWhen(System.currentTimeMillis())
+				.setContentTitle("Let's Carpool")------------------>這是通知title
+				.setTicker(extras.getString("title"))
+				.setContentIntent(contentIntent)
+				.setAutoCancel(true);
+
+
+參考網址: https://github.com/phonegap-build/PushPlugin
