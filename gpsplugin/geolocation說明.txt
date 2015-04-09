@@ -1,0 +1,9 @@
+cordova plugin add org.apache.cordova.geolocation
+
+在android/res/xml/config.xml加入
+	<feature name="Geolocation">
+    		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+	</feature>
+
+
+參考網址: http://docs.phonegap.com/en/edge/cordova_geolocation_geolocation.md.html
