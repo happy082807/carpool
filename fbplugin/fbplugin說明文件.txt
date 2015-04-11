@@ -1,0 +1,10 @@
+cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin --variable APP_ID="your app id" --variable APP_NAME="myApplication"
+
+將your app id改成facebook上的那個app id
+myApplication改成facebook上的app name
+
+把plugin裡的facebookConnectPlugin複製到js裡
+
+執行後，可能會產生invalid key hash
+
+就把它顯示出來的key hash再輸入至facebook上的key hashes裡(最後加上"=")
